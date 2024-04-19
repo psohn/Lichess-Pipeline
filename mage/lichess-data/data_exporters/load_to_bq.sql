@@ -1,3 +1,0 @@
-SELECT *
-FROM load_gcs
-PARTITION BY DATE(date)

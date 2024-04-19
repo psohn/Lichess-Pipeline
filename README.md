@@ -7,7 +7,7 @@ Lichess is one of the two most popular online chess websites (second to chess.co
 In order to create a pipeline, we employ `GCP` as our cloud service provider, `mage` as our orchestrator, `terraform` for IaC, and `Looker Studio` for visualizations. 
 ![pipeline](https://i.gyazo.com/6b569fae95a403c5fead55f558d98c9a.png)
 
-It is of note that although there is a large amount of chess data, we chose to only use January of 2014 in order to save costs (free trial ran out). The data itself was under 1Gb so it was decided not to use partitioning as it may have been a waste of resources for how little the data was getting queried by us.
+It is of note that although there is a large amount of chess data, we chose to only use January of 2014 in order to save costs (free trial ran out). The data itself was under 1Gb so it was decided not to use partitioning as it may have been a waste of resources for how little the data was getting queried by us. Similarly, it was chosen not to use `spark` or `DBT` since the dataset was quite small and could be cleaned easily in `mage`.
 
 ## Getting Started
 
